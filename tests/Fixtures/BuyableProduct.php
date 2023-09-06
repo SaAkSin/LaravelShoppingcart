@@ -1,6 +1,6 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart\Fixtures;
+namespace SaAkSin\Tests\Shoppingcart\Fixtures;
 
 use Gloudemans\Shoppingcart\Contracts\Buyable;
 

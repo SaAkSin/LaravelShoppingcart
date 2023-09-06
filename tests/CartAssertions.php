@@ -1,8 +1,8 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart;
+namespace SaAkSin\Tests\Shoppingcart;
 
-use Gloudemans\Shoppingcart\Cart;
+use SaAkSin\Shoppingcart\Cart;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 trait CartAssertions

@@ -1,6 +1,6 @@
 <?php
 
-namespace Gloudemans\Shoppingcart\Exceptions;
+namespace SaAkSin\Shoppingcart\Exceptions;
 
 use RuntimeException;
 

@@ -1,20 +1,20 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart;
+namespace SaAkSin\Tests\Shoppingcart;
 
 use Mockery;
 use PHPUnit\Framework\Assert;
-use Gloudemans\Shoppingcart\Cart;
+use SaAkSin\Shoppingcart\Cart;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Collection;
-use Gloudemans\Shoppingcart\CartItem;
+use SaAkSin\Shoppingcart\CartItem;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Session\SessionManager;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Gloudemans\Shoppingcart\ShoppingcartServiceProvider;
-use Gloudemans\Tests\Shoppingcart\Fixtures\ProductModel;
-use Gloudemans\Tests\Shoppingcart\Fixtures\BuyableProduct;
+use SaAkSin\Shoppingcart\ShoppingcartServiceProvider;
+use SaAkSin\Tests\Shoppingcart\Fixtures\ProductModel;
+use SaAkSin\Tests\Shoppingcart\Fixtures\BuyableProduct;
 
 class CartTest extends TestCase
 {

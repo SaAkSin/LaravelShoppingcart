@@ -1,16 +1,16 @@
 <?php
 
-namespace Gloudemans\Shoppingcart;
+namespace SaAkSin\Shoppingcart;
 
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Session\SessionManager;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Contracts\Events\Dispatcher;
-use Gloudemans\Shoppingcart\Contracts\Buyable;
-use Gloudemans\Shoppingcart\Exceptions\UnknownModelException;
-use Gloudemans\Shoppingcart\Exceptions\InvalidRowIDException;
-use Gloudemans\Shoppingcart\Exceptions\CartAlreadyStoredException;
+use SaAkSin\Shoppingcart\Contracts\Buyable;
+use SaAkSin\Shoppingcart\Exceptions\UnknownModelException;
+use SaAkSin\Shoppingcart\Exceptions\InvalidRowIDException;
+use SaAkSin\Shoppingcart\Exceptions\CartAlreadyStoredException;
 
 class Cart
 {

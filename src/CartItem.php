@@ -1,10 +1,10 @@
 <?php
 
-namespace Gloudemans\Shoppingcart;
+namespace SaAkSin\Shoppingcart;
 
 use Illuminate\Contracts\Support\Arrayable;
-use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Illuminate\Contracts\Support\Jsonable;
+use SaAkSin\Shoppingcart\Contracts\Buyable;
 
 class CartItem implements Arrayable, Jsonable
 {
