@@ -4,6 +4,7 @@ namespace SaAkSin\Shoppingcart;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
+use Illuminate\Support\Arr;
 use SaAkSin\Shoppingcart\Contracts\Buyable;
 
 class CartItem implements Arrayable, Jsonable
@@ -192,9 +193,9 @@ class CartItem implements Arrayable, Jsonable
      */
     public function updateFromBuyable(Buyable $item)
     {
-        $this->id       = $item->getBuyableIdentifier($this->options);
-        $this->name     = $item->getBuyableDescription($this->options);
-        $this->price    = $item->getBuyablePrice($this->options);
+        $this->id = $item->getBuyableIdentifier($this->options);
+        $this->name = $item->getBuyableDescription($this->options);
+        $this->price = $item->getBuyablePrice($this->options);
         $this->priceTax = $this->price + $this->tax;
     }
 
@@ -206,12 +207,12 @@ class CartItem implements Arrayable, Jsonable
      */
     public function updateFromArray(array $attributes)
     {
-        $this->id       = array_get($attributes, 'id', $this->id);
-        $this->qty      = array_get($attributes, 'qty', $this->qty);
-        $this->name     = array_get($attributes, 'name', $this->name);
-        $this->price    = array_get($attributes, 'price', $this->price);
+        $this->id = Arr::get($attributes, 'id', $this->id);
+        $this->qty = Arr::get($attributes, 'qty', $this->qty);
+        $this->name = Arr::get($attributes, 'name', $this->name);
+        $this->price = Arr::get($attributes, 'price', $this->price);
         $this->priceTax = $this->price + $this->tax;
-        $this->options  = new CartItemOptions(array_get($attributes, 'options', $this->options));
+        $this->options = new CartItemOptions(Arr::get($attributes, 'options', $this->options));
 
         $this->rowId = $this->generateRowId($this->id, $this->options->all());
     }
@@ -301,7 +302,7 @@ class CartItem implements Arrayable, Jsonable
      */
     public static function fromArray(array $attributes)
     {
-        $options = array_get($attributes, 'options', []);
+        $options = Arr::get($attributes, 'options', []);
 
         return new self($attributes['id'], $attributes['name'], $attributes['price'], $options);
     }

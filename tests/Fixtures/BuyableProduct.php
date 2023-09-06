@@ -2,7 +2,7 @@
 
 namespace SaAkSin\Tests\Shoppingcart\Fixtures;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use SaAkSin\Shoppingcart\Contracts\Buyable;
 
 class BuyableProduct implements Buyable
 {
